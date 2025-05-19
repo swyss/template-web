@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spulen-Berechner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Spulen Induktivitäts-Rechner</h1>
+
+  <form id="coil-form">
+    <label>
+      Windungszahl (N):
+      <input type="number" id="turns" required />
+    </label>
+
+    <label>
+      Rel. Permeabilität (μr):
+      <input type="number" id="mu_r" step="0.01" value="1" required />
+    </label>
+
+    <label>
+      Innerer Durchmesser (m):
+      <input type="number" id="d_inner" step="0.001" required />
+    </label>
+
+    <label>
+      Äußerer Durchmesser (m):
+      <input type="number" id="d_outer" step="0.001" />
+    </label>
+
+    <label>
+      Spulenlänge (m):
+      <input type="number" id="length" step="0.001" required />
+    </label>
+
+    <button type="submit">Berechnen</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="coil.js"></script>
+</body>
+</html>

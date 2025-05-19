@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RC-Tiefpass-Rechner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔻 RC-Tiefpass-Rechner</h1>
+
+    <form id="rc-form">
+      <div class="input-group">
+        <label for="resistance">Widerstand R (Ω): <span id="r-val">1000</span></label>
+        <input type="range" id="resistance" min="1" max="100000" step="100" value="1000">
+      </div>
+
+      <div class="input-group">
+        <label for="capacitance">Kapazität C (nF): <span id="c-val">100</span></label>
+        <input type="range" id="capacitance" min="1" max="10000" step="10" value="100">
+      </div>
+    </form>
+
+    <div id="result">Grenzfrequenz: –</div>
+  </div>
+
+  <script src="rc.js"></script>
+</body>
+</html>
